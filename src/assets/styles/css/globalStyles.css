@@ -1,0 +1,8 @@
+.MuiContainer-root {
+    padding: 0 !important;
+
+}
+
+.MuiGrid-container {
+    min-height: 50vh;
+}

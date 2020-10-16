@@ -1,0 +1,16 @@
+
+.login-image {
+    background: url("../../../assets/images/misc/login-background.gif");
+    background-size: cover;
+}
+
+.link-navigation {
+    cursor: pointer;
+}
+
+
+@media (min-width: 992px) { 
+    .login-image {
+        min-height: 100vh;
+    }
+}
