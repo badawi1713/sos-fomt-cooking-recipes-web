@@ -31,6 +31,8 @@ const Login = () => {
   const [open, setOpen] = useState(false);
   const [currentDate, setCurrentDate] = useState("");
   const [currentTime, setCurrentTime] = useState("");
+  const [currentTimeBackground, setCurrentTimeBackground] = useState("");
+  const [morning, setMorning] = useState(false);
 
   useEffect(() => {
     const today = new Date();
@@ -41,7 +43,29 @@ const Login = () => {
       "-" +
       today.getFullYear();
     const time =
-      today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+      (today.getHours() < 10 ? "0" : "") +
+      today.getHours() +
+      ":" +
+      ((today.getMinutes() < 10 ? "0" : "") + today.getMinutes()) +
+      ":" +
+      ((today.getSeconds() < 10 ? "0" : "") + today.getSeconds());
+
+    if (today.getHours() >= 6 && today.getHours() < 15) {
+      setCurrentTimeBackground(
+        "https://primeprefer.com/wp-content/uploads/2020/05/morning-1.jpg"
+      );
+      setMorning(true);
+    } else if (today.getHours() >= 15 && today.getHours() < 18) {
+      setCurrentTimeBackground(
+        "https://theshoutnetwork.com/wp-content/uploads/2020/05/pine-forest-landscape-evening-sunset-with-mountain-sky-illustration_105940-381.jpg"
+      );
+      setMorning(false);
+    } else {
+      setCurrentTimeBackground(
+        "https://img.favpng.com/18/16/7/moonlight-sky-night-illustration-png-favpng-CBBSyFZCgC7xT6ParVbiqwZyi.jpg"
+      );
+      setMorning(false);
+    }
 
     const timeInterval = setInterval(() => {
       setCurrentDate(date);
@@ -200,8 +224,7 @@ const Login = () => {
                 borderRadius={10}
                 height={140}
                 style={{
-                  backgroundImage:
-                    "url(https://img.favpng.com/18/16/7/moonlight-sky-night-illustration-png-favpng-CBBSyFZCgC7xT6ParVbiqwZyi.jpg)",
+                  backgroundImage: `url(${currentTimeBackground})`,
                   backgroundSize: "cover",
                 }}
                 display="flex"
@@ -212,14 +235,14 @@ const Login = () => {
                 <Typography
                   variant="h6"
                   component="h1"
-                  style={{ color: "#fff" }}
+                  style={morning ? { color: "#3f51b5" } : { color: "#fff" }}
                 >
                   {currentDate}
                 </Typography>
                 <Typography
                   variant="h6"
                   component="h1"
-                  style={{ color: "#fff" }}
+                  style={morning ? { color: "#3f51b5" } : { color: "#fff" }}
                 >
                   {currentTime}
                 </Typography>
