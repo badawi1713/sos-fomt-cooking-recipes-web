@@ -1,5 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live Demo
+https://sos-recipes.netlify.app/
+
+## Development Documentation
+https://www.figma.com/file/4Cyx4BfIkYZwXc8wx9Lda3/Story-of-Season%3A-FoMT---Cooking-Recipes
+
 ## Available Scripts
 
 In the project directory, you can run:
