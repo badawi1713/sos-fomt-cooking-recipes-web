@@ -13,6 +13,14 @@ overflow-x: auto;
     padding-bottom: 7px !important;
 }
 
+thead tr th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead tr th:last-child {
+    border-top-right-radius: 10px;
+}
+
 @media screen and (max-width: 900px){
     .home-table-container {
         width: 100% !important;
