@@ -30,9 +30,13 @@ const RecipeList = (props) => {
                 >
                   <ErrorOutlineIcon
                     fontSize="large"
-                    style={{ marginBottom: 20 }}
+                    style={{ marginBottom: 20, color: "#757575" }}
                   />
-                  <Typography variant="h4" component="h1">
+                  <Typography
+                    variant="h4"
+                    component="h1"
+                    style={{ color: "#757575" }}
+                  >
                     Sorry this page is still under construction.
                   </Typography>
                 </Box>

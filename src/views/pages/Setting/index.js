@@ -12,7 +12,7 @@ const Setting = (props) => {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Navigation pageTitle="Recipe List" props={props} />
+      <Navigation pageTitle="Setting" props={props} />
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <section>
@@ -30,9 +30,13 @@ const Setting = (props) => {
                 >
                   <ErrorOutlineIcon
                     fontSize="large"
-                    style={{ marginBottom: 20 }}
+                    style={{ marginBottom: 20, color: "#757575" }}
                   />
-                  <Typography variant="h4" component="h1">
+                  <Typography
+                    variant="h4"
+                    component="h1"
+                    style={{ color: "#757575" }}
+                  >
                     Sorry this page is still under construction.
                   </Typography>
                 </Box>
